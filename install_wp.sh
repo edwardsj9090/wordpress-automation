@@ -35,5 +35,6 @@ echo "Replacing the wp-config.php file to match the default MySQL setup..."
 sleep 3
 sudo cp -r $HOME/wordpress-automation/wp-config.php /var/www/html/wordpress/
 sudo rm -rf /wordpress/wp-config-sample.php
+sudo rm -rf latest.tar.gz
 echo
 echo "Now visit http://serverIPaddress/wordpress/wp-admin/install.php"
