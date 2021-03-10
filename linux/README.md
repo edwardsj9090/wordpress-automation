@@ -5,5 +5,5 @@ This script will setup all of the prerequsite LAMP stack components and create a
 At the linux command line, do this:
 
 1. `git clone https://github.com/edwardsj9090/wordpress-automation`
-2. `cd wordpress-automation`
+2. `cd wordpress-automation/linux`
 3. `sh install_wp.sh`
