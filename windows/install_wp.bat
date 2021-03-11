@@ -1,6 +1,9 @@
 @echo off
 
 echo.
+echo Enabling IIS (Windows Web Server)...
+dism /online /Enable-Feature /FeatureName:IIS-WebServer /All
+echo.
 echo This will download and install wordpress...
 echo.
 echo Downloading and extracting latest WordPress zip file to the user's desktop...
@@ -11,4 +14,8 @@ tar -xf latest.zip
 echo.
 move "wordpress" "%SYSTEMDRIVE%\inetpub\wwwroot\"
 echo.
+echo Cleaning up downloaded files...
+del /q /s %USERPROFILE%\Desktop\latest.zip
+echo.
+echo Complete :)
 pause
