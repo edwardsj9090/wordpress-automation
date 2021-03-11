@@ -9,6 +9,6 @@ echo.
 curl -O https://wordpress.org/latest.zip
 tar -xf latest.zip
 echo.
-xcopy /I /H /Y "latest\wordpress" "%SYSTEMDRIVE%\test\wordpress\"
+move "wordpress" "%SYSTEMDRIVE%\inetpub\wwwroot\"
 echo.
 pause
