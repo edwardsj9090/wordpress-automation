@@ -9,3 +9,5 @@ echo.
 curl -O https://wordpress.org/latest.zip
 echo.
 xcopy "latest\wordpress" "%SYSTEMDRIVE%\test\"
+echo.
+pause
