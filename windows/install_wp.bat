@@ -8,6 +8,6 @@ cd %USERPROFILE%\Desktop\
 echo.
 curl -O https://wordpress.org/latest.zip
 echo.
-xcopy "latest.zip\wordpress" "%SYSTEMDRIVE%\test\"
+xcopy "latest.zip\wordpress\*" "%SYSTEMDRIVE%\test\wordpress\"
 echo.
 pause
