@@ -4,8 +4,9 @@ This script will setup all of the prerequsite LAMP stack components and create a
 
 At the linux command line, do this:
 
-NOTE: If _git_ is not installed, just run `sudo apt install git`
+NOTE: You do not need to prepend _sudo_ in step 3 because sudo is specified inside the script.  If the script needs your password, it will ask.
 
-1. `git clone https://github.com/edwardsj9090/wordpress-automation`
-2. `cd wordpress-automation/linux`
-3. `sh install_wp.sh`
+1. If _git_ is not installed, just run `sudo apt install git`
+2. `git clone https://github.com/edwardsj9090/wordpress-automation`
+3. `cd wordpress-automation/linux`
+4. `sh install_wp.sh`
