@@ -14,6 +14,17 @@ At the Linux command line:
 4. `sh install_wp.sh`
 
 **DEBIAN**
-Some Debian users may have to add the sury repository in order to download the proper php packages.
 
-1. 
+Some Debian users may have to add the 3rd party _sury_ repository in order to download the proper php packages.
+
+`sudo apt update`
+
+`sudo apt install -y curl wget gnupg2 ca-certificates lsb-release apt-transport-https`
+
+`wget https://packages.sury.org/php/apt.gpg`
+
+`sudo apt-key add apt.gpg`
+
+`echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/php7.list`
+
+`sudo apt update`
