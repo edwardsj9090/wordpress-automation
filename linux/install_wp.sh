@@ -11,7 +11,7 @@ sudo apt update && sudo apt upgrade -y && sudo apt dist-upgrade -y
 echo
 echo "Very nice...now we install the necessary LAMP (Linux, Apache, MySQL/MariaDB, PHP/Perl) components..."
 sleep 3
-sudo apt install apache2 mysql-common mariadb-server php7.4 tar -y
+sudo apt install apache2 mysql-common mariadb-server php7.4 php7.4-mysql tar -y
 echo
 echo "Now we download and install WordPress..."
 sleep 3
