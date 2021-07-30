@@ -13,6 +13,8 @@ At the Linux command line:
 3. `cd wordpress-automation/linux`
 4. `sh install_wp.sh`
 
+
+
 **DEBIAN**
 
 Some Debian users may have to add the 3rd party _sury_ repository in order to download the proper php packages.
