@@ -7,7 +7,7 @@ sleep 3
 echo
 echo "First make sure that all packages are updated..."
 sleep 3
-sudo apt update && sudo apt upgrade && sudo apt dist-upgrade -y
+sudo apt update && sudo apt upgrade -y && sudo apt dist-upgrade -y
 echo
 echo "Very nice...now we install the necessary LAMP (Linux, Apache, MySQL/MariaDB, PHP/Perl) components..."
 sleep 3
