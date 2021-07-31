@@ -37,4 +37,12 @@ sudo cp -r $HOME/wordpress-automation/linux/wp-config.php /var/www/html/wordpres
 sudo rm -rf /wordpress/wp-config-sample.php
 sudo rm -rf latest.tar.gz
 echo
+echo "Changing WordPress directory permissions..."
+sleep 3
+echo
+sudo chown www-data: wordpress
+echo
 echo "Now visit http://serverIPaddress/wordpress/wp-admin/install.php"
+echo
+echo "To get IP Address, just type 'ip address OR if you have net-tools installed, use 'ifconfig'."
+echo
