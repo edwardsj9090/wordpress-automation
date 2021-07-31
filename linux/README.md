@@ -22,6 +22,8 @@ The script will run the update and upgrade commands.
 
 =====================================================================
 
+**OTHERWISE START HERE**
+
 **NOTE:** You do not need to prepend _sudo_ in step 3 because sudo is specified inside the script.  If the script needs your password, it will ask.
 
 At the Linux command line:
