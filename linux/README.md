@@ -4,22 +4,9 @@ This script will setup all of the prerequsite LAMP stack components and create a
 
 =====================================================================
 
-**UBUNTU**
-
-**NOTE:** You do not need to prepend _sudo_ in step 3 because sudo is specified inside the script.  If the script needs your password, it will ask.
-
-At the Linux command line:
-
-1. If _git_ is not installed, just run `sudo apt install git`
-2. `git clone https://github.com/edwardsj9090/wordpress-automation`
-3. `cd wordpress-automation/linux`
-4. `sh install_wp.sh`
-
-=====================================================================
-
 **DEBIAN**
 
-Some Debian users may have to add the 3rd party _sury_ repository in order to download the proper php packages before continuing.
+Debian/Raspberry Pi users will have to add the 3rd party _sury_ repository in order to download the proper php packages before continuing.
 
 `sudo apt update`
 
@@ -31,4 +18,17 @@ Some Debian users may have to add the 3rd party _sury_ repository in order to do
 
 `echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/php7.list`
 
-`sudo apt update`
+The script will run the update and upgrade commands.
+
+=====================================================================
+
+**UBUNTU**
+
+**NOTE:** You do not need to prepend _sudo_ in step 3 because sudo is specified inside the script.  If the script needs your password, it will ask.
+
+At the Linux command line:
+
+1. If _git_ is not installed, just run `sudo apt install git`
+2. `git clone https://github.com/edwardsj9090/wordpress-automation`
+3. `cd wordpress-automation/linux`
+4. `sh install_wp.sh`
