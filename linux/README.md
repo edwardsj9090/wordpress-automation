@@ -4,7 +4,7 @@ This script will setup all of the prerequsite LAMP stack components and create a
 
 =====================================================================
 
-**DEBIAN**
+**DEBIAN USERS START HERE**
 
 Debian/Raspberry Pi users will have to add the 3rd party _sury_ repository in order to download the proper php packages before continuing.
 
@@ -21,8 +21,6 @@ Debian/Raspberry Pi users will have to add the 3rd party _sury_ repository in or
 The script will run the update and upgrade commands.
 
 =====================================================================
-
-**UBUNTU**
 
 **NOTE:** You do not need to prepend _sudo_ in step 3 because sudo is specified inside the script.  If the script needs your password, it will ask.
 
