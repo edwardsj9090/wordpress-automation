@@ -57,6 +57,10 @@ define( 'NONCE_SALT',       'put your unique phrase here' );
 
 /**#@-*/
 
+/* Allow local filesystem access for plugins to be installed */
+
+define('FS_METHOD','direct');
+
 /**
  * WordPress Database Table prefix.
  *
