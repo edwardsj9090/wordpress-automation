@@ -40,7 +40,9 @@ echo
 echo "Changing WordPress directory permissions..."
 sleep 3
 echo
-sudo chown www-data: wordpress/*
+sudo chown -R www-data: wordpress
+# sudo chown www-data: wordpress/wp-contents/plugins
+# sudo chown www-data: wordpress/wp-contents/themes
 echo
 echo "Now visit http://serverIPaddress/wordpress/wp-admin/install.php"
 echo
