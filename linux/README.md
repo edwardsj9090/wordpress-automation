@@ -30,5 +30,4 @@ At the Linux command line:
 
 1. If _git_ is not installed, just run `sudo apt install git`
 2. `git clone https://github.com/edwardsj9090/wordpress-automation`
-3. `cd wordpress-automation/linux`
-4. `sh install_wp.sh`
+3. `sh wordpress-automation/linux/install_wp.sh`
