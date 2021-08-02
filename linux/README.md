@@ -2,8 +2,6 @@
 
 This script will setup all of the prerequsite LAMP stack components and create a default WordPress database and DB user.
 
-**NOTE:** I recommend logging into your MySQL/MariaDB database instance and changing the WP connection values post-install.  Then update them in your **wp-config.php** file to match.
-
 =====================================================================
 
 **DEBIAN USERS START HERE**
@@ -33,3 +31,7 @@ At the Linux command line:
 1. If _git_ is not installed, just run `sudo apt install git`
 2. `git clone https://github.com/edwardsj9090/wordpress-automation`
 3. `sh wordpress-automation/linux/install_wp.sh`
+
+======================================================================
+
+**NOTE:** I recommend logging into your MySQL/MariaDB database instance and changing the WP connection values post-install.  Then update them in your **wp-config.php** file to match.
