@@ -44,7 +44,7 @@ sudo chown -R www-data: wordpress
 # sudo chown www-data: wordpress/wp-contents/plugins
 # sudo chown www-data: wordpress/wp-contents/themes
 echo
-echo "Now visit http://serverIPaddress/wordpress/wp-admin/install.php"
+echo "Now visit http://ServerIP/wordpress/"
 echo
 echo "To get IP Address, just type 'ip address' OR if you have net-tools installed, use 'ifconfig'."
 echo
