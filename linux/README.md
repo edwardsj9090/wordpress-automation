@@ -1,6 +1,8 @@
 # Wordpress Installer Script
 
-This script will setup all of the prerequsite LAMP stack components and create a default WordPress database and DB user (you may want to change those post-install).
+This script will setup all of the prerequsite LAMP stack components and create a default WordPress database and DB user.
+
+**NOTE:** I recommend logging into your MySQL/MariaDB database instance and changing the WP connection values post-install.  Then update them in your **wp-config.php** file to match.
 
 =====================================================================
 
