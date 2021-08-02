@@ -1,25 +1,30 @@
 @echo off
-
 echo.
-echo Enabling IIS (Windows Web Server)...
+echo Installing web server components...
+timeout /t 3
+echo.
 dism /online /Enable-Feature /FeatureName:IIS-WebServer /All
 echo.
-:: WORK IN PROGRESS
-:: 
-:: GOING TO ADD IN THE PIECE THAT CREATES THE VIRTUAL DIRECTORIES IN IIS LATER ON
-::
+echo If you are prompted to reboot, say NO.
+echo.
 echo This will download and install wordpress...
+timeout /t 3
 echo.
 echo Downloading and extracting latest WordPress zip file to the user's desktop...
-cd %USERPROFILE%\Desktop\
+cd %userprofile%\Desktop\
 echo.
 curl -O https://wordpress.org/latest.zip
 tar -xf latest.zip
 echo.
-move "wordpress" "%SYSTEMDRIVE%\inetpub\wwwroot\"
+move "wordpress" "%systemdrive%\inetpub\wwwroot"
+echo.
+echo Creating web directories...
+timeout /t 3
+echo.
+%systemroot%\System32\inetsrv\appcmd.exe add vdir /app.name:"Default Web Site/" /path:/wordpress /physicalPath:%systemdrive%\inetpub\wwwroot\wordpress
 echo.
 echo Cleaning up downloaded files...
-del /q /s %USERPROFILE%\Desktop\latest.zip
+del /q /s %userprofile%\Desktop\latest.zip
 echo.
-echo Complete :)
+echo Complete
 pause
