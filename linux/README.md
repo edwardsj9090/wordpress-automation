@@ -24,8 +24,6 @@ The script will run the update and upgrade commands.
 
 **OTHERWISE START HERE**
 
-**NOTE:** You do not need to prepend _sudo_ in step 3 because sudo is specified inside the script.  If the script needs your password, it will ask.
-
 At the Linux command line:
 
 1. If _git_ is not installed, just run `sudo apt install git`
@@ -34,4 +32,4 @@ At the Linux command line:
 
 ======================================================================
 
-**NOTE:** I recommend logging into your MySQL/MariaDB database instance and changing the WP connection values post-install.  Then update them in your **wp-config.php** file to match.
+**NOTE:** I recommend logging into MySQL/MariaDB and changing the root login as well as the password for the _wordpress_ user post-install.  Then update the password value in your _wp-config.php_ file to match.  Do this only if you plan on exposing your server to the internet.
