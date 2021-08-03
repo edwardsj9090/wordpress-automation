@@ -33,3 +33,7 @@ At the Linux command line:
 ======================================================================
 
 **NOTE:** I recommend logging into MySQL/MariaDB and changing the root login as well as the password for the _wordpress_ user post-install.  Then update the password value in your _wp-config.php_ file to match.  Do this only if you plan on exposing your server to the internet.
+
+`sudo mysql -u root -p` (if you don't have a mysql password, just hit _Enter_ although I'd recommend changing that too)
+
+`ALTER USER 'wordpress'@'localhost' IDENTIFIED BY 'newpassword';`
