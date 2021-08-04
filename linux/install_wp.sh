@@ -1,50 +1,25 @@
 #!/bin/sh
-echo
-echo "This script assumes you are running a flavor of linux with apt package manager."
-echo
-echo "This script will install the necessary LAMP stack components to host your very own WordPress site :)"
-sleep 3
-echo
-echo "First make sure that all packages are updated..."
-sleep 3
+
+# Perform updates
 sudo apt update && sudo apt upgrade -y && sudo apt dist-upgrade -y
-echo
-echo "Very nice...now we install the necessary LAMP (Linux, Apache, MySQL/MariaDB, PHP/Perl) components..."
-sleep 3
+
+# Install web components
 sudo apt install apache2 mysql-common mariadb-server php7.4 php7.4-mysql tar -y
-echo
-echo "Now we download and install WordPress..."
-sleep 3
+
+# Download and install Wordpress
 cd /var/www/html
 sudo wget https://wordpress.org/latest.tar.gz --no-check-certificate
-echo
-echo "Unzipping wordpress into a folder on the web root"
-sleep 3
 sudo tar -xzvf latest.tar.gz
-echo
-echo "Downloaded and installed WordPress..."
-sleep 3
-echo
-echo "Creating WP database and DB User..."
-sleep 3
+
+# Configuring database environment
 echo
 echo "If you don't have a root password for your MySQL instance, just press Enter:"
 sudo mysql -u root -p < $HOME/wordpress-automation/linux/wp_mysql_setup.sql
-echo
-echo "Replacing the wp-config.php file to match the default MySQL setup..."
-sleep 3
+
+#Setup Wordpress environment
 sudo cp -r $HOME/wordpress-automation/linux/wp-config.php /var/www/html/wordpress/
 sudo rm -rf /wordpress/wp-config-sample.php
 sudo rm -rf latest.tar.gz
-echo
-echo "Changing WordPress directory permissions..."
-sleep 3
-echo
-sudo chown -R www-data: wordpress
-# sudo chown www-data: wordpress/wp-contents/plugins
-# sudo chown www-data: wordpress/wp-contents/themes
+sudo chown -R www-data: /var/www/html/wordpress
 echo
 echo "Now visit http://ServerIP/wordpress/"
-echo
-echo "To get IP Address, just type 'ip address' OR if you have net-tools installed, use 'ifconfig'."
-echo
